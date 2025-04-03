@@ -4,17 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <title>Vanilla App Template</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" crossorigin src="/goit-advancedjs-hw-04/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-Cgc9PhsO.js">
     <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-Dr4k8ETB.css">
-    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/index-BMyqoBLK.css">
+    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/index-B1zuDyeW.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <form class="form" id="search-form">
+        <input
+          type="text"
+          name="search"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit" class="button">Search</button>
+      </form>
+      <span class="loader"></span>
+      <ul class="gallery" id="gallery"></ul>
+      <button class="button">Load More</button>
+    </div>
   </body>
 </html>
