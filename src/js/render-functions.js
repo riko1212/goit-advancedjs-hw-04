@@ -2,11 +2,11 @@ const renderHTMLElement = (node, content, position = 'beforeend') => {
   node.insertAdjacentHTML(position, content);
 };
 
-const removeInnerHTMLElement = (node) => {
+const removeInnerHTMLElement = node => {
   node.innerHTML = '';
 };
 
-export const renderSearchForm = (node) => {
+export const renderSearchForm = node => {
   const content = `
     <form class="search-form" id="search-form">
       <input
@@ -22,14 +22,16 @@ export const renderSearchForm = (node) => {
   renderHTMLElement(node, content);
 };
 
-export const renderGalleryWrapper = (node) => {
+export const renderGalleryWrapper = node => {
   const content = `<div class="gallery" id="gallery"></div>`;
 
   renderHTMLElement(node, content);
 };
 
 export const renderGalleryItems = (node, images) => {
-  const content = images.map((image) => `
+  const content = images
+    .map(
+      image => `
     <div class="gallery-item">
       <a href="${image.largeImageURL}">
         <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
@@ -53,15 +55,16 @@ export const renderGalleryItems = (node, images) => {
         </div>
       </div>
     </div>
-  `)
-  .join('');
+  `
+    )
+    .join('');
 
   renderHTMLElement(node, content);
 };
 
 export const renderImages = (node, images) => {
   renderGalleryItems(node, images);
-}
+};
 
 export const renderNewImages = (node, images) => {
   removeInnerHTMLElement(node);
@@ -71,7 +74,7 @@ export const renderNewImages = (node, images) => {
   }
 };
 
-export const renderLoader = (node) => {
+export const renderLoader = node => {
   const content = `
     <div class="loader-wrapper hidden">
       <div class="loading ">Loading images, please wait...</div>
@@ -82,10 +85,10 @@ export const renderLoader = (node) => {
   renderHTMLElement(node, content);
 };
 
-export const renderButton = (node) => {
+export const renderButton = node => {
   const content = `
     <button type="button" class="button load-more hidden">Load more</button>
   `;
 
   renderHTMLElement(node, content);
-}
+};

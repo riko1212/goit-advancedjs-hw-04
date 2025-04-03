@@ -28,7 +28,7 @@
   padding: 32px 16px;
 }
 
-.search-form {
+.form {
   margin-bottom: 32px;
   display: flex;
   align-items: center;
@@ -36,12 +36,12 @@
   gap: 8px;
 }
 
-.search-form input {
+.form input {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   display: block;
   line-height: 1.5em;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   width: 100%;
   font-weight: 400;
   padding: 7px 16px;
@@ -50,7 +50,7 @@
   max-width: 272px;
 }
 
-.search-form input:hover {
+.form input:hover {
   outline: none;
   border-color: #000;
 }
@@ -63,7 +63,7 @@
   font-weight: 500;
   border: none;
   border-radius: 8px;
-  background-color: #4E75FF;
+  background-color: #4e75ff;
   color: #fff;
   cursor: pointer;
 }
@@ -78,7 +78,7 @@
 }
 
 .gallery-item {
-  border: 1px solid #2E2F42;
+  border: 1px solid #2e2f42;
   width: 100%;
   max-width: 360px;
   min-width: 300px;
@@ -128,7 +128,7 @@
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #4E75FF;
+  border: 5px solid #4e75ff;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
