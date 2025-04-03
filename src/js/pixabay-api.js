@@ -10,7 +10,11 @@ const axiosInstance = axios.create({
   },
 });
 
-export const getImagesFromAPI = async (searchQuery, page = 1, per_page = 15) => {
+export const getImagesFromAPI = async (
+  searchQuery,
+  page = 1,
+  per_page = 15
+) => {
   try {
     const { data } = await axiosInstance.get('/', {
       params: {
@@ -37,4 +41,4 @@ export const getImagesFromAPI = async (searchQuery, page = 1, per_page = 15) => 
       total: 0,
     };
   }
-}
+};
